@@ -101,6 +101,21 @@ img { max-width: 100%; display: block; }
   gap: 40px;
 }
 .brand { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  font-style: italic;
+  background: var(--cream);
+}
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text .full {
   font-family: var(--display);
