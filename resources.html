@@ -33,15 +33,15 @@
   line-height: 1.7;
 }
 
-/* Search Form */
-.teacher-search {
+/* Coming soon */
+.coming-soon {
   background: var(--cream);
   border: 1px solid var(--rule);
-  padding: 44px 48px;
-  margin-bottom: 40px;
+  padding: 70px 48px;
+  text-align: center;
   position: relative;
 }
-.teacher-search::before {
+.coming-soon::before {
   content: '';
   position: absolute;
   top: 14px; left: 14px; right: 14px; bottom: 14px;
@@ -49,145 +49,44 @@
   opacity: 0.20;
   pointer-events: none;
 }
-.search-form {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr auto;
-  gap: 20px;
-  align-items: end;
+.coming-soon .tag {
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 600;
+  margin-bottom: 16px;
   position: relative;
   z-index: 1;
 }
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.field label {
-  font-family: var(--body);
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--orange);
-  font-weight: 600;
-}
-.field input, .field select {
-  font-family: var(--body);
-  font-size: 16px;
-  padding: 14px 16px;
-  border: 1px solid var(--rule);
-  background: var(--paper);
-  color: var(--ink);
-  border-radius: 2px;
-  transition: border-color 0.2s ease, background 0.2s ease;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.field input:focus, .field select:focus {
-  outline: none;
-  border-color: var(--navy);
-  background: var(--cream);
-}
-.field select {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231e3a5f' stroke-width='1.5'><polyline points='6 9 12 15 18 9'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 40px;
-}
-.search-btn {
-  font-family: var(--body);
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  background: var(--navy);
-  color: var(--cream);
-  border: 1px solid var(--navy);
-  padding: 16px 28px;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: background 0.2s ease;
-  height: fit-content;
-  white-space: nowrap;
-}
-.search-btn:hover { background: var(--navy-soft); border-color: var(--navy-soft); }
-
-@media (max-width: 760px) {
-  .search-form { grid-template-columns: 1fr; gap: 16px; }
-  .teacher-search { padding: 32px 24px; }
-}
-
-/* Results */
-.results-meta {
-  font-family: var(--body);
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--rule);
-  font-style: italic;
-}
-.results-meta strong { color: var(--navy); font-style: normal; font-weight: 600; }
-
-.teacher-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-.teacher-card {
-  background: var(--cream);
-  border: 1px solid var(--rule);
-  padding: 24px 28px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: center;
-  transition: border-color 0.2s ease;
-}
-.teacher-card:hover { border-color: var(--orange); }
-.teacher-card .t-name {
+.coming-soon h3 {
   font-family: var(--display);
-  font-size: 22px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--navy);
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
 }
-.teacher-card .t-meta {
-  font-size: 14.5px;
+.coming-soon p {
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
-.teacher-card .t-meta span { color: var(--ink); }
-.teacher-card .t-instruments {
-  font-family: var(--body);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-.teacher-card .t-contact {
-  font-family: var(--body);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.coming-soon a {
   color: var(--navy);
   border-bottom: 1px solid var(--orange);
-  padding-bottom: 3px;
-  white-space: nowrap;
 }
-.teacher-card .t-contact:hover { color: var(--orange); }
-@media (max-width: 540px) {
-  .teacher-card { grid-template-columns: 1fr; }
-}
+.coming-soon a:hover { color: var(--orange); }
 
-.no-results {
-  text-align: center;
-  padding: 50px 24px;
-  background: var(--cream);
-  border: 1px dashed var(--rule);
-  color: var(--muted);
-  font-style: italic;
+@media (max-width: 760px) {
+  .coming-soon { padding: 50px 24px; }
 }
-.no-results strong { color: var(--navy); font-style: normal; }
 
 /* Affiliations grid */
 .resources-section { background: var(--cream-warm); padding: 100px 40px; }
@@ -301,40 +200,14 @@
   <div class="find-inner">
     <div class="find-head">
       <div class="section-eyebrow">Appalachian Teachers Directory</div>
-      <h2>Search Our <em>Directory</em></h2>
-      <p>Enter your zip code and the instrument you're interested in to find AMTA members teaching in your area.</p>
+      <h2>Teacher <em>Directory</em></h2>
+      <p>Search by instrument and location to find an AMTA member teacher near you.</p>
     </div>
 
-    <div class="teacher-search">
-      <div class="search-form">
-        <div class="field">
-          <label for="zipcode">Zip Code</label>
-          <input type="text" id="zipcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="37615">
-        </div>
-        <div class="field">
-          <label for="instrument">Instrument</label>
-          <select id="instrument">
-            <option value="">All instruments</option>
-            <option value="piano">Piano</option>
-            <option value="voice">Voice</option>
-            <option value="violin">Violin</option>
-            <option value="viola">Viola</option>
-            <option value="cello">Cello</option>
-            <option value="guitar">Guitar</option>
-            <option value="flute">Flute</option>
-            <option value="clarinet">Clarinet</option>
-            <option value="saxophone">Saxophone</option>
-            <option value="trumpet">Trumpet</option>
-            <option value="theory">Music Theory</option>
-            <option value="composition">Composition</option>
-          </select>
-        </div>
-        <button type="button" class="search-btn" onclick="searchTeachers()">Search</button>
-      </div>
-    </div>
-
-    <div id="results-area">
-      <!-- Results render here -->
+    <div class="coming-soon">
+      <div class="tag">Coming Soon</div>
+      <h3>Our Teacher Directory Is on the Way</h3>
+      <p>We're building a searchable directory of AMTA member teachers. In the meantime, <a href="contact.html">contact AMTA</a> and we'll help connect you with a teacher in your area.</p>
     </div>
   </div>
 </section>
@@ -479,101 +352,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-// ─────────────────────────────────────────────────
-// TEACHER DIRECTORY DATA — AMTA Members 2026–2027
-// Source: 2026-2027 yearbook membership list.
-// Only name, city, zip, and email are published.
-// Home addresses and personal phone numbers are intentionally excluded.
-// Instrument specialties are pending — AMTA to supply.
-// ─────────────────────────────────────────────────
-const teachers = [
- Coming Soon
-];
-
-// ─────────────────────────────────────────────────
-// Simple proximity: matches by first 3 digits of zip
-// Teachers with empty instrument arrays are always included in
-// instrument-filtered results, since instrument data is pending.
-// ─────────────────────────────────────────────────
-function searchTeachers() {
-  const zip = document.getElementById('zipcode').value.trim();
-  const instrument = document.getElementById('instrument').value;
-
-  let matches = teachers.slice();
-
-  // Filter by instrument — but keep teachers without instrument data
-  // (they may still teach the requested instrument; instruments are pending)
-  if (instrument) {
-    matches = matches.filter(t => t.instruments.length === 0 || t.instruments.includes(instrument));
-  }
-
-  // Sort by zip proximity (first 3 digits)
-  if (zip && zip.length >= 3) {
-    const prefix = zip.substring(0, 3);
-    matches.sort((a, b) => {
-      const aExact = a.zip === zip ? 0 : 1;
-      const bExact = b.zip === zip ? 0 : 1;
-      if (aExact !== bExact) return aExact - bExact;
-      const aPrefix = a.zip.startsWith(prefix) ? 0 : 1;
-      const bPrefix = b.zip.startsWith(prefix) ? 0 : 1;
-      return aPrefix - bPrefix;
-    });
-  }
-
-  renderResults(matches, zip, instrument);
-}
-
-function renderResults(list, zip, instrument) {
-  const resultsArea = document.getElementById('results-area');
-
-  if (list.length === 0) {
-    resultsArea.innerHTML = `
-      <div class="no-results">
-        <strong>No teachers found.</strong><br>
-        Try a different instrument, or <a href="contact.html" style="color: var(--navy); border-bottom: 1px solid var(--orange);">contact AMTA</a> for help finding a teacher.
-      </div>
-    `;
-    return;
-  }
-
-  const filterDesc = [];
-  if (instrument) filterDesc.push(`instrument: <strong>${instrument}</strong>`);
-  if (zip) filterDesc.push(`near zip <strong>${zip}</strong>`);
-  const meta = filterDesc.length
-    ? `Showing <strong>${list.length}</strong> teacher${list.length === 1 ? '' : 's'} — ${filterDesc.join(', ')}`
-    : `Showing all <strong>${list.length}</strong> AMTA member teachers`;
-
-  const instrumentNote = instrument
-    ? `<div style="margin-top:8px; font-size:13px; color: var(--muted); font-style: italic;">Instrument specialties are pending; please contact teachers directly to confirm they teach ${instrument}.</div>`
-    : '';
-
-  const cards = list.map(t => {
-    const instrumentsLine = t.instruments.length
-      ? `<div class="t-instruments">${t.instruments.join(' · ')}</div>`
-      : '';
-    return `
-      <div class="teacher-card">
-        <div>
-          ${instrumentsLine}
-          <div class="t-name">${t.name}</div>
-          <div class="t-meta"><span>${t.city}</span></div>
-        </div>
-        <a href="mailto:${t.contact}" class="t-contact" style="text-transform: none; letter-spacing: 0; white-space: normal; font-size: 14px; word-break: break-all;">${t.contact}</a>
-      </div>
-    `;
-  }).join('');
-
-  resultsArea.innerHTML = `
-    <div class="results-meta">${meta}${instrumentNote}</div>
-    <div class="teacher-list">${cards}</div>
-  `;
-}
-
-// Show all on initial load
-searchTeachers();
-</script>
 
 </body>
 </html>
