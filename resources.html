@@ -78,11 +78,20 @@
   position: relative;
   z-index: 1;
 }
-.coming-soon a {
+.coming-soon a:not(.btn) {
   color: var(--navy);
   border-bottom: 1px solid var(--orange);
 }
-.coming-soon a:hover { color: var(--orange); }
+.coming-soon a:not(.btn):hover { color: var(--orange); }
+.coming-soon .directory-cta {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+.coming-soon .directory-note {
+  margin-top: 22px;
+  font-size: 14px;
+}
 
 @media (max-width: 760px) {
   .coming-soon { padding: 50px 24px; }
@@ -199,15 +208,19 @@
 <section class="find-teacher">
   <div class="find-inner">
     <div class="find-head">
-      <div class="section-eyebrow">Appalachian Teachers Directory</div>
+      <div class="section-eyebrow">MTNA Teacher Directory</div>
       <h2>Teacher <em>Directory</em></h2>
-      <p>Search by instrument and location to find an AMTA member teacher near you.</p>
+      <p>AMTA members are listed in the national directory of the Music Teachers National Association. Search by instrument and location to find a teacher near you.</p>
     </div>
 
     <div class="coming-soon">
-      <div class="tag">Coming Soon</div>
-      <h3>Our Teacher Directory Is on the Way</h3>
-      <p>We're building a searchable directory of AMTA member teachers. In the meantime, <a href="contact.html">contact AMTA</a> and we'll help connect you with a teacher in your area.</p>
+      <div class="tag">Search Nationally, Find Locally</div>
+      <h3>Search the MTNA Teacher Directory</h3>
+      <p>Enter your city or ZIP code and the instrument you're looking for to find qualified MTNA member teachers in upper East Tennessee.</p>
+      <div class="directory-cta">
+        <a href="https://www.mtna.org/cgi/page.cgi/Find-a-Teacher.html" target="_blank" rel="noopener" class="btn btn-dark">Find a Teacher on MTNA →</a>
+      </div>
+      <p class="directory-note">Need help choosing? <a href="contact.html">Contact AMTA</a> and we'll help connect you with a teacher in your area.</p>
     </div>
   </div>
 </section>
